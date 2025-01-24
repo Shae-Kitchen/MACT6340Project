@@ -2,6 +2,19 @@ body {
   background-color: darkslategray;
 }
 
+.electrolize-regular {
+  font-family: "Electrolize", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-light {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 button {
   background-color: beige;
   color: black;
@@ -9,4 +22,17 @@ button {
 
 #testButton {
   background-color: antiquewhite;
+  font-family: "Electrolize", serif;
+}
+
+#mainMenu {
+  font-family: "Electrolize", serif;
+}
+
+#loginMenu {
+  font-family: "Montserrat", serif;
+}
+
+#homeHeroButtons {
+  font-family: "Electrolize", serif;
 }

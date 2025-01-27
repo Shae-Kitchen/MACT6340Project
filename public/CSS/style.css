@@ -16,8 +16,13 @@ body {
 }
 
 button {
-  background-color: beige;
-  color: black;
+  background-color: #1e2d24;
+  color: #f9b4ed;
+}
+
+button:hover {
+  background-color: #f9b4ed;
+  color: #1e2d24;
 }
 
 #testButton {
@@ -37,54 +42,49 @@ button {
   font-family: "Electrolize", serif;
 }
 
-/* Apply styles to the form inside #contactForm */
 #contactForm {
   display: inline-block;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
   text-align: center !important;
+
+  /* Centering on the page */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Space between paragraphs inside #contactForm */
-#contactForm p + p {
-  margin-top: 1em;
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  all: revert;
+  font-family: inherit;
+  border-radius: 1em;
 }
 
-/* Apply styles to labels inside #contactForm */
-#contactForm label {
-  display: inline-block;
-  min-width: 90px;
-  text-align: right;
-}
-
-/* Apply styles to inputs and text areas inside #contactForm */
 #contactForm input,
 #contactForm textarea {
-  font: 1em sans-serif;
+  font-family: "Electrolize", serif;
   width: 300px;
   box-sizing: border-box;
   border: 1px solid #999;
 }
 
-/* Apply focus styles to inputs and text areas inside #contactForm */
-#contactForm input:focus,
-#contactForm textarea:focus {
-  outline-style: solid;
-  outline-color: #000;
-}
-
-/* Apply styles specifically to text areas inside #contactForm */
 #contactForm textarea {
   vertical-align: top;
-  height: 5em;
-}
-
-/* Style buttons inside #contactForm */
-#contactForm .button {
-  padding-left: 90px;
+  min-height: 5em;
+  resize: vertical;
 }
 
 #contactForm button {
+  background-color: #1e2d24;
+  color: #f9b4ed;
   margin-left: 0.5em;
+}
+
+#contactForm button:hover {
+  background-color: #f9b4ed;
+  color: #1e2d24;
 }

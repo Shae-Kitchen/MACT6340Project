@@ -1,11 +1,11 @@
 import express from "express";
 const app = express();
-const port = 3000;
+const port = 5500;
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.post("/contactSubmit", (req, res) => {
+  console.log("Form Submitted");
 });
 
 app.listen(port, () => {

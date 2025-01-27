@@ -2,7 +2,7 @@
   "use strict";
 
   document
-    .querySelector("contact-form-submit")
+    .querySelector("#contact-form-submit")
     .addEventListener("click", contactSubmit);
 
   function contactSubmit() {

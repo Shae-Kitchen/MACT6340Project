@@ -36,3 +36,55 @@ button {
 #homeHeroButtons {
   font-family: "Electrolize", serif;
 }
+
+/* Apply styles to the form inside #contactForm */
+#contactForm {
+  display: inline-block;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  text-align: center !important;
+}
+
+/* Space between paragraphs inside #contactForm */
+#contactForm p + p {
+  margin-top: 1em;
+}
+
+/* Apply styles to labels inside #contactForm */
+#contactForm label {
+  display: inline-block;
+  min-width: 90px;
+  text-align: right;
+}
+
+/* Apply styles to inputs and text areas inside #contactForm */
+#contactForm input,
+#contactForm textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+/* Apply focus styles to inputs and text areas inside #contactForm */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline-style: solid;
+  outline-color: #000;
+}
+
+/* Apply styles specifically to text areas inside #contactForm */
+#contactForm textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+/* Style buttons inside #contactForm */
+#contactForm .button {
+  padding-left: 90px;
+}
+
+#contactForm button {
+  margin-left: 0.5em;
+}

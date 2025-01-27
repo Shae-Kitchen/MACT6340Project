@@ -1,5 +1,5 @@
 body {
-  background-color: darkslategray;
+  background-color: #f2f5ea;
 }
 
 .electrolize-regular {
@@ -36,6 +36,15 @@ button:hover {
 
 #loginMenu {
   font-family: "Montserrat", serif;
+}
+
+#login button {
+  background-color: #f9b4ed;
+  color: #1e2d24;
+}
+#login button:hover {
+  background-color: #1e2d24;
+  color: #f9b4ed;
 }
 
 #homeHeroButtons {
@@ -79,12 +88,27 @@ button:hover {
 }
 
 #contactForm button {
-  background-color: #1e2d24;
-  color: #f9b4ed;
+  background-color: #353a47;
+  color: #eedae2;
   margin-left: 0.5em;
 }
 
 #contactForm button:hover {
-  background-color: #f9b4ed;
-  color: #1e2d24;
+  background-color: #eedae2;
+  color: #353a47;
 }
+
+/* color palette
+
+Main/Neutrals
+ eedae2 - Pale pink
+ 353a47; - Gunmetal Grey
+ F7FFF6 - Cream 
+ 7A7978 - Silver
+ 070707 - Black
+
+Accents
+ #D782BA - Fuchsia
+ #4059AD - Blue+purple
+ #A9FDAC - Mint Green
+ */

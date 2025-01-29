@@ -5,7 +5,7 @@ import * as utils from "./utils/utils.js";
 dotenv.config();
 
 const app = express();
-const port = 5500;
+const port = 3000;
 
 app.use(express.json()); //allows for message data to be passed around on the backend
 app.use(express.static("public"));

@@ -9,61 +9,55 @@
 
     // Add an event listener to the submit button
     //querySelector finds the first instance of #contact-form-submit in the doc
-    const submitButton = document.querySelector("#contact-form-submit");
+    let submitButton = document.querySelector("#contact-form-submit");
     submitButton.addEventListener("click", (event) => {
       // Prevent the default form submission to handle it with JS
       event.preventDefault();
       event.stopPropagation();
-
-      if (!name || !email || !message) {
-        console.log("All fields are required.");
-        return;
-      }
-
-      // Grab values from the form
+      let formValid = true;
       let name = document.querySelector("#name").value;
       let email = document.querySelector("#mail").value;
       let message = document.querySelector("#msg").value;
 
-      //return values to ensure functionality
-      console.log("Thanks! We will be reaching out soon.");
-      console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+      if (!name || !email || !message) {
+        console.log("All fields are required.");
+        formValid = false;
+        return;
+      }
+
+      if ((formValid = true)) {
+        deliverMessage();
+        console.log("Thanks! We will be reaching out soon.");
+        console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+      }
     });
   });
+
+  function deliverMessage() {
+    let name = document.querySelector("#name").value;
+    let email = document.querySelector("#mail").value;
+    let message = document.querySelector("#msg").value; //for some reason, the computer was not connecting the original query for #mail within the deliver function. Added it here and it works fine?
+    let obj = {
+      sub: "message received from NFT Mint",
+      txt: `${name} ${email} ${message}`,
+    };
+
+    fetch("/contactSubmit", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((r) => r.json())
+      .then((response) => {
+        document.querySelector("#contact-button-response").innerHTML =
+          response.result;
+      })
+      .then(() => {
+        setTimeout(() => {
+          document.querySelector("#contact-button-response").innerHTML = "";
+        }, "5000");
+      });
+  }
 })();
-
-//BELOW CODE KEPT FOR REFERRAL/REFRESH POTENTIAL. I KNOW THAT THIS CODE WORKS,
-// BUT I WANT TO MAKE THE STYLE MORE EFFICIENT. COULD I MAKE A BRANCH IN GITHUB? YES.
-// BUT FOR SOME REASON THIS MADE MORE SENSE IN MY BRAIN. BLAME THE ADHD.
-// // Wait for the DOM to fully load before attaching event listeners
-// // avoids issues caused by the script running too early when elements are not yet available in the DOM.
-// document.addEventListener("DOMContentLoaded", function () {
-//   console.log("DOM fully loaded and parsed");
-
-//   // Add an event listener to the submit button
-//   //querySelector finds the first instance of #contact-form-submit in the doc
-//   const submitButton = document.querySelector("#contact-form-submit");
-//   if (submitButton) {
-//     submitButton.addEventListener("click", function (event) {
-//       // Prevent the default form submission to handle it with JS
-//       event.preventDefault();
-//       event.stopPropagation();
-
-//       // Grab values from the form
-//       const name = document.querySelector("#name").value;
-//       const email = document.querySelector("#mail").value;
-//       const message = document.querySelector("#msg").value;
-
-//       // // Simple validation (optional)
-//       // if (!name || !email || !message) {
-//       //   console.log("All fields are required.");
-//       //   return;
-//       // }
-
-//       console.log("Thanks! We will be reaching out soon.");
-//       console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
-//     });
-//   } else {
-//     console.error("Submit button not found!");
-//   }
-// });

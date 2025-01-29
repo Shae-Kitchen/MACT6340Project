@@ -15,6 +15,11 @@
       event.preventDefault();
       event.stopPropagation();
 
+      if (!name || !email || !message) {
+        console.log("All fields are required.");
+        return;
+      }
+
       // Grab values from the form
       let name = document.querySelector("#name").value;
       let email = document.querySelector("#mail").value;

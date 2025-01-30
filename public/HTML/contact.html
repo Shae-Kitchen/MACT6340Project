@@ -129,24 +129,77 @@
 
     <div id="contactForm">
       <form action="/contactSubmit" method="post">
-        <fieldset>
+
+        <div class="row justify-content-center text-start form-holder">
+        <div class="col-10">
+          <form id="contact-form" class="p-3 needs-validation rounded" novalidate>
+            <div class="row justify-content-start mb-2">
+              <div class="row">
+            
+                <div class="col-4 m-2">
+                  <label for="contact-first" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="contact-first" required>
+                  <div class="invalid-feedback">
+                    Please enter your first name.
+                  </div>
+                </div>
+              
+             
+                <div class="col-4 m-2">
+                  <label for="contact-last" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="contact-last" required>
+                  <div class="invalid-feedback">
+                    Please enter your last name.
+                  </div>
+                </div>
+              </div>
+               
+              <div class="row">
+                <div class="col-7 m-2">
+                  <label for="contact-email-addr" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="contact-email-addr" aria-describedby="contact-email-help"
+                    placeholder="name@example.com" required>
+                  <div class="invalid-feedback" id="contact-email-help">
+                    Format should be name@example.com.
+                  </div>
+                </div>
+              </div>
+              <!-- Question and/or comment -->
+              <div class="row">
+                <div class="col m-2">
+                  <label for="contact-question" class="form-label">Question or comment</label>
+                  <div class="input-group has-validation">
+                    <textarea class="form-control" id="contact-question" rows="7" maxlength="1000"
+                      aria-describedby="contact-question-help" required></textarea>
+                    <div id="contact-question-help" class="invalid-feedback">
+                      Please enter your question or comment up to 1000 characters.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <!-- <fieldset>
           <legend>Contact The Artist</legend>
-          <p>
+          <div>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" required />
-          </p>
+            <input type="text" class="form-control" id="name" placeholder="user_name" required />
+              <div class="invalid-feedback">
+                    Please enter your first name.
+            </div>
+          </div>
           <p>
             <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email" required />
+            <input type="email"  class="form-control" id="mail" placeholder="user@email" required />
           </p>
           <p>
             <label for="msg">Message:</label>
-            <textarea id="msg" name="user_message" required></textarea>
+            <textarea id="msg" placeholder="user_message" required></textarea>
           </p>
           <p class="button">
             <button id="contact-form-submit" type="submit">Send</button>
+          </p> -->
+           <p class="button">
+            <button id="contact-form-submit" type="submit">Send</button>
           </p>
-        </fieldset>
       </form>
     </div>
     <script

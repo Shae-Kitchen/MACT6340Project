@@ -11,6 +11,7 @@
     />
     <!-- <link rel="icon" type="image/x-icon" href="../images/favicon.ico" /> -->
     <title>Personal NFT Mint</title>
+    <link: rel="icon" type="image/x-icon" href="/public/images/favicon.ico"/>
     <meta name="author" content="Shae Kitchen" />
     <meta name="description" content="A Personal NFT Mint for an artist" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,6 +33,32 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/public/CSS/style.css" />
+
+    <style>
+      .hero-section {
+        position: relative;
+        background: url("/public/images/AI_ART_BUBBLES.jpg") center/cover
+          no-repeat;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Electrolize", serif;
+      }
+
+      .hero-section .container {
+        background: rgba(
+          0,
+          0,
+          0,
+          0.4
+        ); /* Optional: Adds a slight overlay for readability */
+        padding: 4rem;
+        border-radius: 10px;
+      }
+    </style> 
+<!-- added styling on the html doc because I only want to use these parameters on this page -->
+
   </head>
   <body>
     <header>
@@ -41,19 +68,18 @@
             id="mainMenu"
             class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
           >
-            <a
-              href="/"
-              class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
-            >
-              <svg
-                class="bi me-2"
-                width="40"
-                height="32"
-                role="img"
-                aria-label="Bootstrap"
-              >
-                <use xlink:href="#bootstrap" />
-              </svg>
+ <a
+  href="http://127.0.0.1:5500/public/"
+  class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"
+>
+  <img
+    src="/public/images/favicon.ico"
+    alt="Site Logo"
+    width="40"
+    height="32"
+    class="me-2"
+  />
+</a>  <!-- //had to change from default svg because svg doesn't work with ico files! -->
             </a>
 
             <ul
@@ -62,7 +88,7 @@
               <li>
                 <a href="#" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#home" />
+                    <use href="/public/index.html" />
                   </svg>
                   Home
                 </a>
@@ -128,181 +154,131 @@
       </div>
     </header>
 
-    <div class="px-4 py-5 my-5 text-center">
-      <img
-        class="d-block mx-auto mb-4"
-        src="../assets/brand/bootstrap-logo.svg"
-        alt=""
-        width="72"
-        height="57"
-      />
-      <h1 class="display-5 fw-bold">Welcome</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">
-          Quickly design and customize responsive mobile-first sites with
-          Bootstrap, the world’s most popular front-end open source toolkit,
-          featuring Sass variables and mixins, responsive grid system, extensive
-          prebuilt components, and powerful JavaScript plugins.
-        </p>
-        <div
-          id="homeHeroButtons"
-          class="d-grid gap-2 d-sm-flex justify-content-sm-center"
-        >
-          <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+    <div class="hero-section text-center text-white">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to Wonderland</h1>
+        <p class="lead mb-4">You're just in time for tea</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
             Meet The Artist
           </button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-            Projects
+          <button type="button" class="btn btn-outline-light btn-lg px-4">
+            Latest
           </button>
         </div>
       </div>
     </div>
 
-    <div class="container px-4 py-5" id="custom-cards">
-      <h2 class="pb-2 border-bottom">Custom cards</h2>
 
-      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-        <div class="col">
-          <div
-            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style="background-image: url('unsplash-photo-1.jpg')"
-          >
-            <div
-              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-            >
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                Short title, long jacket
-              </h3>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <img
-                    src="https://github.com/twbs.png"
-                    alt="Bootstrap"
-                    width="32"
-                    height="32"
-                    class="rounded-circle border border-white"
-                  />
-                </li>
-                <li class="d-flex align-items-center me-3">
-                  <svg class="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#geo-fill" />
-                  </svg>
-                  <small>Earth</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <svg class="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#calendar3" />
-                  </svg>
-                  <small>3d</small>
-                </li>
-              </ul>
-            </div>
+  <div class="b-example-divider"></div>
+
+  <div class="container px-4 py-5" id="index-featurette">
+    <h2 class="pb-2 border-bottom">Newest Additions</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Dream_In_Glass.jpg');">
+            <div class="overlay"></div>
+    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 content">
+      <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">Dream In Glass</h3>
+      <p class="description">A surreal exploration of reflections and memory.</p>
+      <ul class="d-flex list-unstyled mt-auto">
+        <li class="me-auto">
+          <img src="/public/images/favicon.ico" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+        </li>
+        <li class="d-flex align-items-center me-3">
+          <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+          <small>Release: January 2025</small>
+        </li>
+        <li class="d-flex align-items-center">
+          <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+          <small>3D</small>
+        </li>
+      </ul>
+    </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Mallachite.jpg');">
+          <div class="overlay"></div>
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">Malachite</h3>
+            <p class="description">Having some fun with one of my favorite gemstones!</p>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="/public/images/favicon.ico" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>Release: December 2024</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>4d</small>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <div class="col">
-          <div
-            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style="background-image: url('unsplash-photo-2.jpg')"
-          >
-            <div
-              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-            >
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                Much longer title that wraps to multiple lines
-              </h3>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <img
-                    src="https://github.com/twbs.png"
-                    alt="Bootstrap"
-                    width="32"
-                    height="32"
-                    class="rounded-circle border border-white"
-                  />
-                </li>
-                <li class="d-flex align-items-center me-3">
-                  <svg class="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#geo-fill" />
-                  </svg>
-                  <small>Pakistan</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <svg class="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#calendar3" />
-                  </svg>
-                  <small>4d</small>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div
-            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style="background-image: url('unsplash-photo-3.jpg')"
-          >
-            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                Another longer title belongs here
-              </h3>
-              <ul class="d-flex list-unstyled mt-auto">
-                <li class="me-auto">
-                  <img
-                    src="https://github.com/twbs.png"
-                    alt="Bootstrap"
-                    width="32"
-                    height="32"
-                    class="rounded-circle border border-white"
-                  />
-                </li>
-                <li class="d-flex align-items-center me-3">
-                  <svg class="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#geo-fill" />
-                  </svg>
-                  <small>California</small>
-                </li>
-                <li class="d-flex align-items-center">
-                  <svg class="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#calendar3" />
-                  </svg>
-                  <small>5d</small>
-                </li>
-              </ul>
-            </div>
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Fun_Fungi.jpg');">
+          <div class="overlay"></div>
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">Fun Fungi</h3>
+            <p class="description">A Celebration of the fantastic world of mycelium </p>
+            <ul class="d-flex list-unstyled mt-auto">
+              <li class="me-auto">
+                <img src="/public/images/favicon.ico" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+              </li>
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <small>Release: October 2024</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <small>5d</small>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="row featurette">
+
+    <hr class="featurette-divider">
+
+    <div class="artist-featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">
-          And lastly, this one. <span class="text-muted">Checkmate.</span>
+          Meet The Artist: <span class="text-muted">Shae</span>
         </h2>
-        <p class="lead">
-          And yes, this is the last block of representative placeholder content.
-          Again, not really intended to be actually read, simply here to give
-          you a better view of what this would look like with some actual
-          content. Your content.
+        <p class="lead" id="artist-featurette-index">
+         Hello there! I'm so glad that you could make it to my little corner of the internet. 
+         Here is where I post my most recent generative art projects and make them available for purchase 
+         as NFTs. I am always looking to create new and beautiful art inspired by the amazing works of historical artists 
+         and the natural world around us. If that interests you, or you're a fellow artist looking to collaborate, 
+         stick around for a while or shoot me an email via my contact page.
         </p>
       </div>
       <div class="col-md-5">
-        <svg
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          width="500"
-          height="500"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
+<img 
+  class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+  width="500"
+  height="500"
+  aria-label="A picture of the artist Shae. It is a close up of her face and she is looking towards the camera"
+  preserveAspectRatio="xMidYMid slice"
+  focusable="false"
+  src="/public/images/Shae_Photo.jpg"
+  alt="A picture of the artist Shae. It is a close up of her face and she is looking towards the camera"
+/>
+
+          <title>Meet The Artist</title>
           <rect width="100%" height="100%" fill="#eee" />
-          <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
+          <!-- <text x="50%" y="50%" fill="#aaa" dy=".3em"></text> -->
+        
       </div>
     </div>
     <script

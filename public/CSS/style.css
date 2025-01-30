@@ -1,5 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f2f5ea;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .electrolize-regular {
@@ -13,6 +19,40 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -0.05rem;
+}
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+    margin-left: 5rem;
+  }
+}
+
+.artist-featurette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#artist-featurette-index {
+  margin-top: 2rem;
+  margin-left: 5rem;
 }
 
 button {
@@ -49,6 +89,45 @@ button:hover {
 
 #homeHeroButtons {
   font-family: "Electrolize", serif;
+}
+
+.card-cover {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-cover:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-cover:hover .overlay {
+  opacity: 1;
+}
+
+.description {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-cover:hover .title {
+  display: none;
+}
+
+.card-cover:hover .description {
+  display: block;
+  opacity: 1;
 }
 
 #contactForm {

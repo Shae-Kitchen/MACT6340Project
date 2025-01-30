@@ -39,22 +39,22 @@
       txt: `${name} ${email} ${message}`,
     };
 
-    fetch("/contactSubmit", {
+    fetch("http://localhost:5500/contactSubmit", {
       method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(obj),
     })
-      .then((r) => r.json())
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP error! Status: ${r.status}`);
+        return r.json();
+      })
       .then((response) => {
+        console.log("Server Response:", response);
         document.querySelector("#contact-button-response").innerHTML =
           response.result;
       })
-      .then(() => {
-        setTimeout(() => {
-          document.querySelector("#contact-button-response").innerHTML = "";
-        }, 5000); // Note: delay should be an integer, not a string
-      });
+      .catch((error) => console.error("Fetch error:", error));
   }
 })();

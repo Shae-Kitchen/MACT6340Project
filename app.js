@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import * as utils from "./utils/utils.js";
+import { sendMessage } from "./utils/utils.js";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.post("/contactSubmit", async (req, res) => {
   try {
     // Send the message using the utils.sendMessage function
-    await utils.sendMessage(req.body.sub, req.body.txt);
+    await sendMessage(req.body.sub, req.body.txt);
 
     // Send a success response if the message was successfully sent
     res.json({ result: "success" });

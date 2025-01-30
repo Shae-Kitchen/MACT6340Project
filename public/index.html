@@ -61,7 +61,7 @@
 
   </head>
   <body>
-    <header>
+       <header>
       <div class="px-3 py-2 text-bg-dark">
         <div class="container">
           <div
@@ -86,7 +86,7 @@
               class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small"
             >
               <li>
-                <a href="#" class="nav-link text-secondary">
+                <a href="/public/index.html" class="nav-link text-secondary">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                     <use href="/public/index.html" />
                   </svg>
@@ -94,25 +94,25 @@
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="#index-featurette"class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#speedometer2" />
+                    <use href="#" />
                   </svg>
-                  Updates
+                  Latest
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/public/HTML/projects.html" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#table" />
+                   <use href="/public/HTML/projects.html" />
                   </svg>
                   Portfolio
                 </a>
               </li>
               <li>
-                <a href="" class="nav-link text-white">
+                <a href="#artist-featurette" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#grid" />
+                    <use href="#" />
                   </svg>
                   About
                 </a>
@@ -120,7 +120,7 @@
               <li>
                 <a href="/public/HTML/contact.html" class="nav-link text-white">
                   <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                    <use xlink:href="#" />
+                    <use href="/public/HTML/contact.html" />
                   </svg>
                   Contact
                 </a>
@@ -159,24 +159,32 @@
         <h1 class="display-4 fw-bold">Welcome to Wonderland</h1>
         <p class="lead mb-4">You're just in time for tea</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        
+           <a href="#artist-featurette">
           <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
             Meet The Artist
           </button>
+           </a>
+         
+          <a href="#index-featurette">
           <button type="button" class="btn btn-outline-light btn-lg px-4">
             Latest
           </button>
+          </a>
         </div>
       </div>
     </div>
 
 
-  <div class="b-example-divider"></div>
+    <hr class="featurette-divider">
+
 
   <div class="container px-4 py-5" id="index-featurette">
     <h2 class="pb-2 border-bottom">Newest Additions</h2>
 
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
+        <a href="/public/HTML/projects.html" class="text-decoration-none">
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Dream_In_Glass.jpg');">
             <div class="overlay"></div>
     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 content">
@@ -192,14 +200,17 @@
         </li>
         <li class="d-flex align-items-center">
           <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-          <small>3D</small>
+          <small>.15 ETH</small>
         </li>
       </ul>
     </div>
         </div>
+        </a>
+        </div>
       </div>
 
       <div class="col">
+        <a href="/public/HTML/projects.html" class="text-decoration-none">
         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Mallachite.jpg');">
           <div class="overlay"></div>
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
@@ -215,42 +226,52 @@
               </li>
               <li class="d-flex align-items-center">
                 <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                <small>4d</small>
+                <small>.2 ETH</small>
               </li>
             </ul>
           </div>
         </div>
+        </a>
       </div>
 
-      <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Fun_Fungi.jpg');">
-          <div class="overlay"></div>
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">Fun Fungi</h3>
-            <p class="description">A Celebration of the fantastic world of mycelium </p>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="/public/images/favicon.ico" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                <small>Release: October 2024</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                <small>5d</small>
-              </li>
-            </ul>
-          </div>
-        </div>
+<div class="col">
+  <a href="/public/HTML/projects.html" class="text-decoration-none">
+    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('/public/images/Fun_Fungi.jpg');">
+      <div class="overlay"></div>
+      <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">Fun Fungi</h3>
+        <p class="description">A Celebration of the fantastic world of mycelium</p>
+        <ul class="d-flex list-unstyled mt-auto">
+          <li class="me-auto">
+            <img src="/public/images/favicon.ico" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+          </li>
+          <li class="d-flex align-items-center me-3">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+            <small>Release: October 2024</small>
+          </li>
+          <li class="d-flex align-items-center">
+            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+            <small>.15 ETH</small>
+          </li>
+        </ul>
       </div>
     </div>
+  </a>
+</div>
+
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+  <a href="/public/HTML/projects.html">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+            See All Projects
+          </button>
+          </a>
+        </div>
   </div>
 
 
     <hr class="featurette-divider">
 
-    <div class="artist-featurette">
+    <div class="artist-featurette" id="artist-featurette">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1">
           Meet The Artist: <span class="text-muted">Shae</span>
@@ -262,6 +283,14 @@
          and the natural world around us. If that interests you, or you're a fellow artist looking to collaborate, 
          stick around for a while or shoot me an email via my contact page.
         </p>
+
+<p class="link button">
+  <a href="/public/HTML/about.html">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+            Learn More
+          </button>
+          </a>
+          </p>
       </div>
       <div class="col-md-5">
 <img 

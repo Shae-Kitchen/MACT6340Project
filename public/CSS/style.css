@@ -22,7 +22,7 @@ body {
 }
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 10rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -30,6 +30,11 @@ body {
 .featurette-heading {
   letter-spacing: -0.05rem;
 }
+
+a.text-decoration-none {
+  display: block;
+}
+
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
   .featurette-heading {
@@ -94,10 +99,12 @@ button:hover {
 .card-cover {
   position: relative;
   transition: transform 0.3s ease-in-out;
+  color: F7FFF6;
 }
 
 .card-cover:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 .overlay {
@@ -106,7 +113,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -128,6 +135,7 @@ button:hover {
 .card-cover:hover .description {
   display: block;
   opacity: 1;
+  color: F7FFF6;
 }
 
 #contactForm {

@@ -9,7 +9,7 @@ function sendMessage(sub, txt) {
       user: process.env.MAIL_USERNAME,
       pass: process.env.MAIL_PASSWORD,
     },
-    requireTLS: process.env.MAIL_TLS,
+    requireTLS: process.env.MAIL_TLS === "true",
   });
 
   let message = {
@@ -19,14 +19,14 @@ function sendMessage(sub, txt) {
     text: txt,
   };
 
-  async function main() {
-    const info = await transporter
-      .sendMail(message)
-      .then(() => {
-        console.log("Message sent");
-      })
-      .catch((err) => {
-        console.log("Message not sent - " + err);
-      });
-  }
+  return new Promise(async (resolve, reject) => {
+    try {
+      await transporter.sendMail(message);
+      console.log("Message sent");
+      resolve();
+    } catch (err) {
+      console.log("Message not sent - " + err);
+      reject(err);
+    }
+  });
 }

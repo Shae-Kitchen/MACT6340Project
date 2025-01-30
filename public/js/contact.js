@@ -25,18 +25,15 @@
         return;
       }
 
-      if ((formValid = true)) {
-        deliverMessage();
+      if (formValid === true) {
+        deliverMessage(name, email, message); // Pass values as arguments
         console.log("Thanks! We will be reaching out soon.");
         console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
       }
     });
   });
 
-  function deliverMessage() {
-    let name = document.querySelector("#name").value;
-    let email = document.querySelector("#mail").value;
-    let message = document.querySelector("#msg").value; //for some reason, the computer was not connecting the original query for #mail within the deliver function. Added it here and it works fine?
+  function deliverMessage(name, email, message) {
     let obj = {
       sub: "message received from NFT Mint",
       txt: `${name} ${email} ${message}`,
@@ -57,7 +54,7 @@
       .then(() => {
         setTimeout(() => {
           document.querySelector("#contact-button-response").innerHTML = "";
-        }, "5000");
+        }, 5000); // Note: delay should be an integer, not a string
       });
   }
 })();

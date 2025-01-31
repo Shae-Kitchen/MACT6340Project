@@ -31,6 +31,10 @@ body {
   margin: 10rem 0; /* Space out the Bootstrap <hr> more */
 }
 
+.featurette-mini-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
 /* Thin out the marketing headings */
 /* rtl:begin:remove */
 .featurette-heading {

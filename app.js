@@ -7,10 +7,22 @@ dotenv.config();
 
 const app = express();
 const port = 5500;
-
+app.set("view engine", "ejs");
 app.use(cors());
 app.use(express.json()); //allows for message data to be passed around on the backend
 app.use(express.static("public"));
+
+app.get("/index", (req, res) => {
+  res.render("index.ejs");
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact.ejs");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about.ejs");
+});
 
 app.post("/contactSubmit", async (req, res) => {
   try {

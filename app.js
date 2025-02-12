@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json()); //allows for message data to be passed around on the backend
 app.use(express.static("public"));
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 

@@ -8,6 +8,7 @@ dotenv.config();
 const app = express();
 const port = 5500;
 app.set("view engine", "ejs");
+app.set("views", "./views");
 app.use(cors());
 app.use(express.json()); //allows for message data to be passed around on the backend
 app.use(express.static("public"));

@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json()); //allows for message data to be passed around on the backend
 app.use(express.static("public"));
 
-app.get("/", async (req, res) => {
+app.get("/", async (req, res, next) => {
   await db
     .connect()
     .then(async () => {
@@ -24,7 +24,6 @@ app.get("/", async (req, res) => {
       res.render("index.ejs");
     })
     .catch(next);
-  res.render("index.ejs");
 });
 
 app.get("/contact", (req, res) => {

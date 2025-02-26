@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import { sendMessage } from "./utils/utils.js";
+import * as db from "./utils/database.js";
+let projects = [];
 
 dotenv.config();
 
@@ -13,12 +15,24 @@ app.use(cors());
 app.use(express.json()); //allows for message data to be passed around on the backend
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  await db
+    .connect()
+    .then(async () => {
+      projects = await db.getAllProjects();
+      console.log(projects);
+      res.render("index.ejs");
+    })
+    .catch(next);
   res.render("index.ejs");
 });
 
 app.get("/contact", (req, res) => {
   res.render("contact.ejs");
+});
+
+app.get("/projects", (req, res) => {
+  res.render("projects.ejs", { data: projects });
 });
 
 app.get("/about", (req, res) => {

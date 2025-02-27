@@ -31,7 +31,7 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/projects", (req, res) => {
-  res.render("projects.ejs", { data: projects });
+  res.render("projects.ejs", { projectArray: projects });
 });
 
 app.get("/about", (req, res) => {

@@ -8,6 +8,16 @@ html {
   box-sizing: inherit;
 }
 
+ejs {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: #f2f5ea;
   padding-top: 5rem;

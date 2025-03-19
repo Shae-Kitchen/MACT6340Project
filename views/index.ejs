@@ -37,100 +37,89 @@
   <body>
     <header><%- include('header'); %></header>
 
-    <div class="hero-section text-center text-white">
-      <div class="container" src="/images/AI_ART_BUBBLES.jpg" alt="an ai-developed depiction of colorful glass orbs, swirled together with pink and purple glass-like adornments" width="device-width" height="200"></div>>
-        <h1 class="display-4 fw-bold">Welcome to Wonderland</h1> 
-        <p class="lead mb-4">You're just in time for tea</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <a href="#artist-featurette">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
-              Meet The Artist
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Dark mode hero</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4">
+            Quickly design and customize responsive mobile-first sites with
+            Bootstrap, the world’s most popular front-end open source toolkit,
+            featuring Sass variables and mixins, responsive grid system,
+            extensive prebuilt components, and powerful JavaScript plugins.
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button
+              type="button"
+              class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
+            >
+              Custom button
             </button>
-          </a>
-
-          <a href="#index-featurette">
             <button type="button" class="btn btn-outline-light btn-lg px-4">
-              Latest
+              Secondary
             </button>
-          </a>
+          </div>
         </div>
       </div>
     </div>
-
-    <hr class="featurette-divider" />
-
-    <div class="container px-4 py-5" id="index-featurette">
-      <h2 class="pb-2 border-bottom">Newest Additions</h2>
+    <hr class="hr hr-blurry" />
+    <div class="container px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom">Features</h2>
 
       <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
         <div class="col">
-          <a href="/views/projects.ejs" class="text-decoration-none">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('./images/Dream_In_Glass.jpg')"
+          >
             <div
-              class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-              style="background-image: url('./images/Dream_In_Glass.jpg')"
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
             >
-              <div class="overlay"></div>
-              <div
-                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 content"
-              >
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">
-                  Dream In Glass
-                </h3>
-                <p class="description">
-                  A surreal exploration of reflections and memory.
-                </p>
-                <ul class="d-flex list-unstyled mt-auto">
-                  <li class="me-auto">
-                    <img
-                      src="./images/favicon.ico"
-                      alt="It's a heart"
-                      width="32"
-                      height="32"
-                      class="rounded-circle border border-white"
-                    />
-                  </li>
-                  <li class="d-flex align-items-center me-3">
-                    <svg class="bi me-2" width="1em" height="1em">
-                      <use xlink:href="#geo-fill" />
-                    </svg>
-                    <small>Release: January 2025</small>
-                  </li>
-                  <li class="d-flex align-items-center">
-                    <svg class="bi me-2" width="1em" height="1em">
-                      <use xlink:href="#calendar3" />
-                    </svg>
-                    <small>.15 ETH</small>
-                  </li>
-                </ul>
-              </div>
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                Dream In Glass
+              </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="me-auto">
+                  <img
+                    src="./images/favicon.ico"
+                    alt="The website logo - a pink heart on a light blue background"
+                    width="32"
+                    height="32"
+                    class="rounded-circle border border-white"
+                  />
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#geo-fill" />
+                  </svg>
+                  <small>January 2025</small>
+                </li>
+                <li class="d-flex align-items-center">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#calendar3" />
+                  </svg>
+                  <small>3 Eth</small>
+                </li>
+              </ul>
             </div>
-          </a>
+          </div>
         </div>
-      </div>
 
-      <hr class="featurette-mini-divider" />
-
-      <div class="col">
-        <a href="/views/" class="text-decoration-none">
+        <div class="col">
           <div
             class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style="background-image: url('./images/Mallachite.jpg')"
+            style="background-image: url('unsplash-photo-2.jpg')"
           >
-            <div class="overlay"></div>
             <div
               class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
             >
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">
-                Malachite
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                Much longer title that wraps to multiple lines
               </h3>
-              <p class="description">
-                Having some fun with one of my favorite gemstones!
-              </p>
               <ul class="d-flex list-unstyled mt-auto">
                 <li class="me-auto">
                   <img
                     src="./images/favicon.ico"
-                    alt="Bootstrap"
+                    alt="The website logo - a pink heart on a light blue background"
                     width="32"
                     height="32"
                     class="rounded-circle border border-white"
@@ -140,43 +129,33 @@
                   <svg class="bi me-2" width="1em" height="1em">
                     <use xlink:href="#geo-fill" />
                   </svg>
-                  <small>Release: December 2024</small>
+                  <small>March 2025</small>
                 </li>
                 <li class="d-flex align-items-center">
                   <svg class="bi me-2" width="1em" height="1em">
                     <use xlink:href="#calendar3" />
                   </svg>
-                  <small>.2 ETH</small>
+                  <small>3 Eth</small>
                 </li>
               </ul>
             </div>
           </div>
-        </a>
-      </div>
+        </div>
 
-      <hr class="featurette-mini-divider" />
-
-      <div class="col">
-        <a href="/projects" class="text-decoration-none">
+        <div class="col">
           <div
             class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style="background-image: url('./images/Fun_Fungi.jpg')"
+            style="background-image: url('unsplash-photo-3.jpg')"
           >
-            <div class="overlay"></div>
-            <div
-              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
-            >
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold title">
-                Fun Fungi
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                Another longer title belongs here
               </h3>
-              <p class="description">
-                A Celebration of the fantastic world of mycelium
-              </p>
               <ul class="d-flex list-unstyled mt-auto">
                 <li class="me-auto">
                   <img
                     src="./images/favicon.ico"
-                    alt="It's a Heart"
+                    alt="The website logo - a pink heart on a light blue background"
                     width="32"
                     height="32"
                     class="rounded-circle border border-white"
@@ -186,32 +165,22 @@
                   <svg class="bi me-2" width="1em" height="1em">
                     <use xlink:href="#geo-fill" />
                   </svg>
-                  <small>Release: October 2024</small>
+                  <small>December 2024</small>
                 </li>
                 <li class="d-flex align-items-center">
                   <svg class="bi me-2" width="1em" height="1em">
                     <use xlink:href="#calendar3" />
                   </svg>
-                  <small>.15 ETH</small>
+                  <small>3 Eth</small>
                 </li>
               </ul>
             </div>
           </div>
-        </a>
-      </div>
-
-      <hr class="featurette-mini-divider" />
-
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a href="/projects">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
-            See All Projects
-          </button>
-        </a>
+        </div>
       </div>
     </div>
 
-    <hr class="featurette-divider" />
+    <hr class="hr hr-blurry" />
 
     <div class="artist-featurette" id="artist-featurette">
       <div class="col-md-7">
@@ -253,8 +222,6 @@
         <!-- <text x="50%" y="50%" fill="#aaa" dy=".3em"></text> -->
       </div>
     </div>
-
-    <hr class="featurette-divider" />
 
     <div class="container">
       <footer><%- include('footer'); %></footer>

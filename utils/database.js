@@ -20,7 +20,7 @@ export async function connect() {
       //   user: process.env.MYSQL_USER,
       //   password: process.env.MYSQL_PASSWORD,
       //   database: process.env.MYSQL_DATABASE,
-      // }
+      // } // localhost sql server data
     )
     .promise();
   console.log("Database connected!");

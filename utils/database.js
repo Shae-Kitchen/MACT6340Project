@@ -22,6 +22,7 @@ export async function connect() {
 }
 
 export default pool;
+
 export async function getAllProjects() {
   try {
     const [rows] = await pool.query("SELECT * FROM projects;");

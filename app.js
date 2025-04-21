@@ -8,7 +8,7 @@ let projects = [];
 dotenv.config();
 
 const app = express();
-const port = 5500;
+const port = 8080;
 app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(cors());
@@ -54,5 +54,4 @@ app.post("/contactSubmit", async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-  console.log(window.location);
 });
